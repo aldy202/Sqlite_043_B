@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.button);
+        fab = findViewById(R.id.floatingBtn);
         BacaData();
 
         adapter = new TemanAdapter(temanArrayList);
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  void BacaData(){
+        temanArrayList.clear();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         JsonArrayRequest jArr = new JsonArrayRequest(url_select,new Response.Listener<JSONArray>(){
