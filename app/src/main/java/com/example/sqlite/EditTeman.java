@@ -52,6 +52,7 @@ public class EditTeman extends AppCompatActivity {
         nm = bundle.getString("kunci2");
         tlp = bundle.getString("kunci3");
 
+
         idText.setText("Id : "+id);
         edNama.setText(nm);
         edTelpon.setText(tlp);
